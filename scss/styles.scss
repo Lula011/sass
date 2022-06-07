@@ -1,6 +1,7 @@
-@import "base/variables";
+@import "base/extend";
 @import "base/mixins";
-@import "base/condicionales";
+@import "base/maps";
+@import "base/variables";
 
 // operaciones
 
@@ -10,21 +11,24 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
 }
+
 .cont-index {
     display: grid;
     height: 100vh;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 2fr 1fr 0.5fr 2fr 2fr 0.5fr;
-    grid-template-areas: "banner banner"
-        "nav nav"
-        "main main"
-        "section section2"
-        "section3 section4"
-        "footer footer";
+    grid-template-areas: "banner"
+        "nav"
+        "main"
+        "section"
+        "section2"
+        "section4"
+        "section3"
+        "footer";
 
     row-gap: 4px;
 
@@ -32,66 +36,68 @@ body{
 }
 
 .imagen-contacto {
-    background-color:$color-principal;
+    background-color: $color-principal;
     grid-area: banner;
 
-img {
-    height: 100%;
-    width: 100%;
-    border: $color-principal solid 1px;
-}
+    img {
+        height: 100%;
+        width: 100%;
+        border: $color-principal solid 1px;
+        display: none;
+    }
 }
 
 .index-2 {
-    background-color: $color-principal;
+    background-color: $color-secundario;
     grid-area: nav;
-    
-a {
 
-    color: whitesmoke;
-    font-size: 1.5rem;
+    a {
+        color: whitesmoke;
+        font-size: 1.5rem;
 
-}
-
+    }
 
 
-li:hover {
-    background-color: rgba(157, 177, 159, 0.726);
-    font-size: 1rem;
-    font-weight: bold;
-}
+
+    li:hover {
+        background-color: rgba(157, 177, 159, 0.726);
+        font-size: 1rem;
+        font-weight: bold;
+    }
 }
 
 .main-11 {
-    background-color: $color-principal;
+    background-color: $color-secundario;
     grid-area: main;
 
-
-h1 {
-    background-color: peru;
-    font-family: 'Jost', sans-serif;
-    color: black;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: -2px;
-    padding: 5px;
-
+    h1 {
+        font-weight: 800;
+        background-color: peru;
+        padding-left: 3%;
+        margin: 1px;
+        color: rgb(0, 0, 0);
+        font-family: 'Jost', sans-serif;
+        text-align: center;
+        animation-name: animate__animated animate__fadeInLeftBig;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
 }
-}
+
 
 .section1 {
-    background-color:$color-principal;
+    background-color: $color-principal;
     grid-area: section;
 
-img {
-    width: 100%;
-    height: 100%;
-    float: right;
+    img {
+        width: 100%;
+        height: 100%;
+        float: right;
+    }
 }
-}
+
 .section2 {
-    background-color:$color-principal;
+    background-color: $color-principal;
     grid-area: section2;
     font-size: large;
     font-family: 'Jost', sans-serif;
@@ -101,50 +107,51 @@ img {
 
 
 
-.p-1 {
-    text-align: center;
-    padding-top: 10%;
-    margin-left: 5%;
-    margin-right: 5%;
+    .p-1 {
+        text-align: center;
+        padding-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .p-2 {
+        text-align: center;
+        margin: 1%;
+        margin-left: 5%;
+        margin-right: 5%;
+
+    }
+
+    .p-3 {
+        text-align: center;
+        margin: 1%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
-.p-2 {
-    text-align: center;
-    margin: 1%;
-    margin-left: 5%;
-    margin-right: 5%;
-
-}
-
-.p-3 {
-    text-align: center;
-    margin: 1%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-}
 .section3 {
     font-size: large;
-    background-color: $color-principal ;
+    background-color: $color-principal;
     grid-area: section3;
     font-family: 'Jost', sans-serif;
     font-weight: 800;
     color: antiquewhite;
 
-.p1 {
-    text-align: center;
-    padding-top: 15%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
+    .p1 {
+        text-align: center;
+        padding-top: 15%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 
-.p2 {
-    text-align: center;
-    padding-top: 1%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-}
+    .p2 {
+        text-align: center;
+        padding-top: 1%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
+    }
 }
 
 
@@ -152,12 +159,13 @@ img {
     background-color: $color-principal;
     grid-area: section4;
 
-img {
-    width: 100%;
-    height: 100%;
-    float: left;
+    img {
+        width: 100%;
+        height: 100%;
+        float: left;
+    }
 }
-}
+
 footer {
     font-family: 'Jost', sans-serif;
     grid-area: footer;
@@ -167,9 +175,852 @@ footer {
     margin-top: 3px;
 
 
-#lula {
-    color: white;
-    font-size: 15px;
-    text-align: center;
+    #lula {
+        color: white;
+        font-size: 15px;
+        text-align: center;
+    }
 }
+
+
+//procesos del café
+
+.Contenedor_dos {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 2fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "uno"
+        "nav-1"
+        "titulo-1"
+        "planta"
+        "planta-p"
+        "granos"
+        "granos-p"
+        "secado"
+        "secado-p"
+        "tostado"
+        "tostado-p"
+        "blends"
+        "blends-p"
+        "extraccion"
+        "extraccion-p"
+        "leche"
+        "leche-p"
+        "footer-1";
+    row-gap: 0.8%;
+
+}
+
+.uno {
+    background-color: #1f3629;
+    grid-area: uno;
+    display: none;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.dos {
+
+    background-color: black;
+    grid-area: nav-1;
+
+    a {
+        color: whitesmoke;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    li:hover {
+        background-color: rgba(157, 177, 159, 0.726);
+        font-size: 0.5rem;
+        font-weight: bold;
+    }
+}
+
+.tres {
+    background-color: $color-secundario;
+    grid-area: titulo-1;
+    border: solid black;
+
+    h1 {
+        font-weight: 800;
+        background-color: peru;
+        padding-left: 3%;
+        margin: 1px;
+        color: rgb(0, 0, 0);
+        font-family: 'Jost', sans-serif;
+        text-align: center;
+        animation-name: animate__animated animate__fadeInLeftBig;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+
+    }
+}
+
+.cuatro {
+    background-color: $color-principal;
+    grid-area: planta;
+
+    img {
+        width: 100%;
+        padding: 5%;
+    }
+}
+
+.cuatro-p {
+    background-color: $color-principal;
+    grid-area: planta-p;
+
+    p {
+        padding: 5%;
+        font-size: large;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+
+    }
+}
+
+.cinco {
+    background-color: $color-principal;
+    grid-area: granos;
+
+    img {
+        height: 100%;
+        width: 100%;
+        padding: 5%;
+    }
+}
+
+.cinco-p {
+    background-color: $color-principal;
+    grid-area: granos-p;
+
+    p {
+
+        padding: 5%;
+        padding-bottom: 1px;
+        font-size: large;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+    }
+}
+
+.seis {
+    background-color: $color-principal;
+    grid-area: secado;
+
+    img {
+        padding: 5%;
+        margin-top: 7%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.seis-p {
+    background-color: $color-principal;
+
+    grid-area: secado-p;
+
+}
+
+.titulo-6p {
+    margin: 30px 1px 1px 10px;
+    padding-top: 5%;
+    font-size: large;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    color: antiquewhite;
+
+}
+
+.titulo-6p2 {
+    padding: 2%;
+    padding-bottom: 1px;
+    font-size: large;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    color: antiquewhite;
+}
+
+.siete {
+    background-color: $color-principal;
+
+    grid-area: tostado;
+
+    img {
+        width: 100%;
+        height: 100%;
+        padding: 5%;
+    }
+}
+
+.siete-p {
+    background-color: $color-principal;
+
+    grid-area: tostado-p;
+
+    p {
+        padding: 5%;
+        padding-bottom: 1px;
+        font-size: large;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+    }
+}
+
+.ocho {
+    background-color: $color-principal;
+
+    grid-area: blends;
+
+    img {
+        width: 100%;
+        height: 100%;
+        padding: 5%;
+    }
+}
+
+.ocho-p {
+    background-color: $color-principal;
+
+    grid-area: blends-p;
+
+    p {
+        padding: 5%;
+        padding-bottom: 1px;
+        font-size: large;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+    }
+}
+
+.nueve {
+    background-color: $color-principal;
+
+    grid-area: extraccion;
+
+    img {
+        width: 100%;
+        height: 100%;
+        padding: 5%;
+    }
+}
+
+
+.nueve-p {
+
+    background-color: $color-principal;
+    grid-area: extraccion-p;
+
+    p {
+        padding: 5%;
+        padding-bottom: 1px;
+        font-size: large;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+    }
+}
+
+
+.diez {
+    background-color: $color-principal;
+
+    grid-area: leche;
+
+    img {
+        width: 100%;
+        height: 80%;
+        padding: 2%;
+        margin-top: 3%;
+    }
+}
+
+.diez-p {
+    background-color: $color-principal;
+
+    grid-area: leche-p;
+
+    p {
+        padding: 5%;
+        padding-bottom: 1px;
+        font-size: large;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+    }
+}
+
+.parrafo-latte {
+    margin-top: -5%;
+    font-size: large;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    color: antiquewhite;
+}
+
+.once {
+    background-color: black;
+    grid-area: footer-1;
+}
+
+
+//recetas de café
+
+
+.Contenedor_recetas {
+    display: grid;
+    height: 100vh;
+
+    grid-template-rows: 3fr 0.5fr 0.5fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 0.5fr;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "banner-receta"
+        "nav-receta"
+        "main-receta"
+        "flatwhite"
+        "latte"
+        "americano"
+        "cappu"
+        "expresso-m"
+        "lungo"
+        "expresso"
+        "ristretto"
+        "pie-receta";
+
+}
+
+.cont-1 {
+    background-color: #1f3629;
+    grid-area: banner-receta;
+
+
+    img {
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+}
+
+.cont-2 {
+    background-color: black;
+    grid-area: nav-receta;
+    border: solid black;
+
+    a {
+        color: whitesmoke;
+        font-size: 1.5rem;
+    }
+
+    li:hover {
+        background-color: rgba(157, 177, 159, 0.726);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+.cont-3 {
+    grid-area: main-receta;
+
+    h1 {
+        font-weight: 800;
+        background-color: peru;
+        padding-left: 3%;
+        color: rgb(0, 0, 0);
+        font-family: 'Jost', sans-serif;
+        text-align: center;
+        animation-name: animate__animated animate__fadeInLeftBig;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.cont-4 {
+    background-color: peru;
+    grid-area: flatwhite;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        padding: 5%;
+        margin: 1%;
+        font-size: medium;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+        text-align: center;
+    }
+}
+
+.cont-5 {
+    background-color: peru;
+    grid-area: latte;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        padding: 5%;
+        margin: 1%;
+        font-size: medium;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+        text-align: center;
+    }
+}
+
+.cont-6 {
+    background-color: peru;
+    grid-area: americano;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        padding: 5%;
+        margin: 1%;
+        font-size: medium;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+        text-align: center;
+    }
+}
+
+.cont-7 {
+    background-color: peru;
+    grid-area: cappu;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        padding: 5%;
+        margin: 1%;
+        font-size: medium;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+        text-align: center;
+    }
+}
+
+.cont-8 {
+    background-color: peru;
+    grid-area: expresso-m;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        padding: 5%;
+        margin: 1%;
+        font-size: medium;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+        text-align: center;
+    }
+}
+
+.cont-9 {
+    background-color: peru;
+    grid-area: lungo;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        padding: 5%;
+        margin: 1%;
+        font-size: medium;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+        text-align: center;
+    }
+}
+
+.cont-10 {
+    background-color: peru;
+    grid-area: expresso;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        padding: 5%;
+        margin: 1%;
+        font-size: medium;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+        text-align: center;
+    }
+}
+
+.cont-11 {
+    background-color: peru;
+    grid-area: ristretto;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        padding: 5%;
+        margin: 1%;
+        font-size: medium;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+        text-align: center;
+    }
+}
+
+
+.cont-14 {
+    background-color: peru;
+    grid-area: pie-receta;
+
+    footer {
+        font-family: 'Jost', sans-serif;
+        grid-area: footer;
+        background-color: rgb(0, 0, 0);
+        box-shadow: rgb(0, 0, 0) 5px 5px 8px 12px;
+        margin-top: 5px;
+        font-weight: 800;
+    }
+}
+
+
+
+//ARTE LATTE
+
+.Contenedor_artelatte {
+    display: grid;
+    height: 100vh;
+
+    grid-template-rows: 3fr 0.5fr 0.5fr 3fr 4fr 3fr 1fr 0.5fr;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "artebanner"
+        "artenav"
+        "artetitulo"
+        "carousel"
+        "artevideo"
+        "artetexto"
+        "arteparrafo"
+        "artefooter";
+
+}
+
+.contarte1 {
+    background-color: rgb(0, 0, 0);
+    grid-area: artebanner;
+    display: none;
+}
+
+.cont-arte2 {
+    background-color: rgb(0, 0, 0);
+    grid-area: artenav;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    border: solid black;
+
+    a {
+        color: whitesmoke;
+        font-size: 1.5rem;
+    }
+
+    li:hover {
+        background-color: rgba(157, 177, 159, 0.726);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+.cont-arte3 {
+    background-color: rgb(255, 255, 255);
+    grid-area: artetitulo;
+
+    h1 {
+        font-weight: 800;
+        background-color: peru;
+        padding-left: 3%;
+        margin: 1px;
+        color: rgb(0, 0, 0);
+        font-family: 'Jost', sans-serif;
+        text-align: center;
+        animation-name: animate__animated animate__fadeInLeftBig;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.carousel {
+    grid-area: carousel;
+
+}
+
+.cont-arte4 {
+    background-color: rgb(210, 211, 216);
+    grid-area: artevideo;
+
+    iframe {
+        width: 100%;
+
+    }
+}
+
+.cont-arte6 {
+    background-color: peru;
+    grid-area: artetexto;
+
+    p {
+        padding: 3%;
+        margin: 1%;
+        font-size: medium;
+        font-family: 'Jost', sans-serif;
+        font-weight: 800;
+        color: antiquewhite;
+        text-align: center;
+    }
+}
+
+.cont-arte7 {
+    grid-area: carrusel;
+
+}
+
+.arteparrafo {
+    grid-area: arteparrafo;
+    display: none;
+
+}
+
+
+.artefooter {
+    grid-area: artefooter;
+    font-family: 'Jost', sans-serif;
+    background-color: rgb(0, 0, 0);
+    box-shadow: rgb(0, 0, 0) 5px 5px 8px 12px;
+    margin-top: 5px;
+    font-weight: 800;
+}
+
+//contacto
+
+.imagen-contacto img {
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+
+.lulas-1 a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 20px;
+
+}
+
+
+
+@include tablet (md) {
+    .cont-index {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "banner"
+            "nav"
+            "main"
+            "section"
+            "section2"
+            "section4"
+            "section3"
+            "footer";
+    }
+
+
+    .cont-2 {
+        text-align: center;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-left: -1px;
+    }
+}
+
+@include desktop(lg) {
+
+    .Contenedor_dos {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas: "uno uno"
+            "nav-1 nav-1"
+            "titulo-1 titulo-1"
+            "planta planta-p"
+            "granos granos-p"
+            "secado secado-p"
+            "tostado tostado-p"
+            "blends blends-p"
+            "extraccion extraccion-p"
+            "leche leche-p"
+            "footer-1 footer-1";
+    }
+
+    .dos a {
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin-left: 20px;
+    }
+
+    .cont-index {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "banner banner"
+            "nav nav"
+            "main main"
+            "section section2"
+            "section3 section4"
+            "footer footer";
+    }
+
+    .imagen-contacto img {
+        display: inline;
+    }
+
+    .index-2 a {
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin-left: 20px;
+    }
+
+
+
+    .section2 .p-2 {
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: -19px;
+        margin-bottom: -19px;
+
+    }
+
+    .Contenedor_recetas {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "banner-receta banner-receta"
+            "nav-receta nav-receta"
+            "main-receta main-receta"
+            "flatwhite latte"
+            "americano cappu"
+            "expresso-m lungo"
+            "expresso ristretto"
+            "pie-receta pie-receta";
+        gap: 1%;
+    }
+
+    .cont-1 img {
+        display: flex;
+    }
+
+    .cont-2 {
+        padding: 1px;
+
+        a {
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            margin-left: 30px;
+        }
+    }
+
+
+    .Contenedor_artelatte {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "artebanner artebanner"
+            "artenav artenav"
+            "artetitulo artetitulo"
+            "carousel carousel"
+            "artetexto artevideo"
+            "artetexto arteparrafo"
+            "artefooter artefooter";
+
+
+    }
+
+    .contarte1 {
+        display: inline-block;
+    }
+
+    .cont-arte2 {
+        padding: 1px;
+
+        .cont-arte2 li {
+            flex-direction: row;
+            height: 30px;
+            width: 195px;
+        }
+    }
+
+    .carousel {
+        width: 100%;
+        justify-items: center;
+        padding-top: 5%;
+        margin-bottom: -60px;
+
+    }
+
+    .cont-arte4 iframe {
+        border: 10px black solid;
+
+    }
+
+
+    .cont-arte6 {
+        padding: 3vh 3vh 3vh 3vh;
+        border: 5px solid;
+    }
+
+    .arteparrafo {
+        display: inline;
+        text-align: center;
+        font-family: 'Jost', sans-serif;
+        font-size: large;
+        color: white;
+        padding-top: 2%;
+        margin-top: 2%;
+    }
+
+    .imagen-contacto img {
+        display: inline-block;
+    }
+
+
 }
