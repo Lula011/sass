@@ -1,7 +1,7 @@
-@import "base/extend";
-@import "base/mixins";
-@import "base/maps";
-@import "base/variables";
+@import "./base/extend";
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/maps";
 
 // operaciones
 
@@ -85,15 +85,17 @@ body {
 }
 
 
-.section1 {
+
+.section1{
     background-color: $color-principal;
     grid-area: section;
-
+    
     img {
         width: 100%;
         height: 100%;
         float: right;
     }
+    
 }
 
 .section2 {
@@ -546,11 +548,12 @@ footer {
 .cont-4 {
     background-color: peru;
     grid-area: flatwhite;
-
+    
     img {
         width: 100%;
         height: 100%;
     }
+    
 
     p {
         padding: 5%;
@@ -561,6 +564,7 @@ footer {
         color: antiquewhite;
         text-align: center;
     }
+    
 }
 
 .cont-5 {
