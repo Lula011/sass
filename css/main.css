@@ -30,7 +30,7 @@ body {
   background-color: black;
   grid-area: nav; }
   .index-2 a {
-    color: whitesmoke;
+    color: antiquewhite;
     font-size: 1.5rem; }
   .index-2 li:hover {
     background-color: rgba(157, 177, 159, 0.726);
@@ -67,7 +67,7 @@ body {
   font-family: 'Jost', sans-serif;
   font-weight: 800;
   color: antiquewhite;
-  padding-top: 5%; }
+  padding-top: 7%; }
   .section2 .p-1 {
     text-align: center;
     padding-top: 10%;
@@ -143,7 +143,7 @@ footer {
   background-color: black;
   grid-area: nav-1; }
   .dos a {
-    color: whitesmoke;
+    color: antiquewhite;
     font-size: 1.5rem;
     text-align: center; }
   .dos li:hover {
@@ -183,6 +183,8 @@ footer {
     font-family: 'Jost', sans-serif;
     font-weight: 800;
     color: antiquewhite; }
+  .cuatro-p .parrafo-planta {
+    padding-top: -10%; }
 
 .cinco {
   background-color: #1f3629;
@@ -340,7 +342,7 @@ footer {
   grid-area: nav-receta;
   border: solid black; }
   .cont-2 a {
-    color: whitesmoke;
+    color: antiquewhite;
     font-size: 1.5rem; }
   .cont-2 li:hover {
     background-color: rgba(157, 177, 159, 0.726);
@@ -487,7 +489,7 @@ footer {
     font-family: 'Jost', sans-serif;
     grid-area: footer;
     background-color: black;
-    box-shadow: black 5px 5px 8px 12px;
+    box-shadow: black;
     margin-top: 5px;
     font-weight: 800; }
 
@@ -510,7 +512,7 @@ footer {
   font-weight: 800;
   border: solid black; }
   .cont-arte2 a {
-    color: whitesmoke;
+    color: antiquewhite;
     font-size: 1.5rem; }
   .cont-arte2 li:hover {
     background-color: rgba(157, 177, 159, 0.726);
@@ -518,7 +520,7 @@ footer {
     font-weight: bold; }
 
 .cont-arte3 {
-  background-color: white;
+  background-color: antiquewhite;
   grid-area: artetitulo; }
   .cont-arte3 h1 {
     font-weight: 800;
@@ -583,6 +585,12 @@ footer {
   .cont-index {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "banner" "nav" "main" "section" "section2" "section4" "section3" "footer"; }
+  .Contenedor_recetas {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 3fr 0.5fr 0.5fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 0.5fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "banner-receta banner-receta" "nav-receta nav-receta" "main-receta main-receta" "flatwhite latte " "americano cappu "  "expresso-m lungo" "expresso ristretto" "pie-receta pie-receta"; }
   .cont-2 {
     text-align: center;
     text-decoration: none;
@@ -653,7 +661,7 @@ footer {
     text-align: center;
     font-family: 'Jost', sans-serif;
     font-size: large;
-    color: white;
+    color: antiquewhite;
     padding-top: 2%;
     margin-top: 2%; }
   .imagen-contacto img {
