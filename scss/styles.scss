@@ -477,7 +477,16 @@ footer {
 .once {
     background-color:$color-secundario;
     grid-area: footer-1;
+
+    footer{
+        font-family: 'Jost', sans-serif;
+        background-color: $color-secundario;
+        font-weight: 800;     
+        border: solid black;
+        padding-top: 5px;            
+    }
 }
+
 
 
 //recetas de café
@@ -713,14 +722,13 @@ footer {
 
 
 .cont-14 {
-    background-color: $color-peru;
+    background-color: $color-secundario;
     grid-area: pie-receta;
 
     footer {
         font-family: 'Jost', sans-serif;
-        grid-area: footer;
         background-color: $color-secundario;
-        box-shadow: $color-secundario;
+        box-shadow: $color-secundario 5px 5px 5px; 
         margin-top: 5px;
         font-weight: 800;
     }
@@ -734,7 +742,7 @@ footer {
     display: grid;
     height: 100vh;
 
-    grid-template-rows: 3fr 0.5fr 0.5fr 3fr 4fr 3fr 1fr 0.5fr;
+    grid-template-rows: 3fr 0.5fr 0.5fr 3fr 4fr 3fr 1fr 1fr;
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "artebanner"
         "artenav"
@@ -834,11 +842,16 @@ footer {
 
 .artefooter {
     grid-area: artefooter;
-    font-family: 'Jost', sans-serif;
-    background-color: $color-secundario;
-    box-shadow: $color-secundario 5px 5px 8px 12px;
-    margin-top: 5px;
-    font-weight: 800;
+
+       
+    footer{
+        font-family: 'Jost', sans-serif;
+        background-color: $color-secundario;
+        box-shadow: rgb(5, 5, 5) 5px 5px 5px 5px;
+        padding-top: 10px;
+        margin-bottom: -25px;
+        font-weight: 800;
+    }
 }
 
 //contacto

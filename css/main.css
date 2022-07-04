@@ -321,6 +321,12 @@ footer {
 .once {
   background-color: black;
   grid-area: footer-1; }
+  .once footer {
+    font-family: 'Jost', sans-serif;
+    background-color: black;
+    font-weight: 800;
+    border: solid black;
+    padding-top: 5px; }
 
 .Contenedor_recetas {
   display: grid;
@@ -483,20 +489,19 @@ footer {
     text-align: center; }
 
 .cont-14 {
-  background-color: peru;
+  background-color: black;
   grid-area: pie-receta; }
   .cont-14 footer {
     font-family: 'Jost', sans-serif;
-    grid-area: footer;
     background-color: black;
-    box-shadow: black;
+    box-shadow: black 5px 5px 5px;
     margin-top: 5px;
     font-weight: 800; }
 
 .Contenedor_artelatte {
   display: grid;
   height: 100vh;
-  grid-template-rows: 3fr 0.5fr 0.5fr 3fr 4fr 3fr 1fr 0.5fr;
+  grid-template-rows: 3fr 0.5fr 0.5fr 3fr 4fr 3fr 1fr 1fr;
   grid-template-columns: repeat(1, 1fr);
   grid-template-areas: "artebanner" "artenav" "artetitulo" "carousel" "artevideo" "artetexto" "arteparrafo" "artefooter"; }
 
@@ -563,12 +568,14 @@ footer {
   display: none; }
 
 .artefooter {
-  grid-area: artefooter;
-  font-family: 'Jost', sans-serif;
-  background-color: black;
-  box-shadow: black 5px 5px 8px 12px;
-  margin-top: 5px;
-  font-weight: 800; }
+  grid-area: artefooter; }
+  .artefooter footer {
+    font-family: 'Jost', sans-serif;
+    background-color: black;
+    box-shadow: #050505 5px 5px 5px 5px;
+    padding-top: 10px;
+    margin-bottom: -25px;
+    font-weight: 800; }
 
 .imagen-contacto img {
   width: 100%;
